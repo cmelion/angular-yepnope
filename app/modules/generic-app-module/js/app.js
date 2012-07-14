@@ -2,7 +2,7 @@
 var hbo = hbo || {};
 
 // Declare app level module which depends on filters, and services
-hbo.seTool = angular.module('SETool', ['SETool.filters', 'SETool.services', 'SETool.directives']).
+hbo.GenericTool = angular.module('GenericTool', ['GenericTool.filters', 'GenericTool.services', 'GenericTool.directives']).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/horizontal', {templates: { layout:	'partials/horizontal.html',
     												 left:		'partials/foo.html',
@@ -25,4 +25,5 @@ hbo.seTool = angular.module('SETool', ['SETool.filters', 'SETool.services', 'SET
     											'bar'		: 'js/bar.js'
   }}});    
     $routeProvider.otherwise({redirectTo: '/horizontal'});
+    console.log("App router configured.")
 }]);

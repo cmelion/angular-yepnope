@@ -1,6 +1,18 @@
 <!doctype html>
-<html ng-app="SETool">
+<html xmlns:ng="http://angularjs.org" ng-app="GenericTool">
 	<head>
+    <!--[if lte IE 8]>
+      <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+        
+        // Optionally these for CSS
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+      </script>
+    <![endif]-->	
 		<script src="../../assets/lib/yepnope.js" type="text/javascript"></script>			
 	</head>
 	<body ng-controller="AppController">
@@ -8,7 +20,7 @@
 		<a href="#/vertical">vertical</a>
 		<hr />
 		
-		<div ng-include src="templates.layout" scope="" />
+		<div ng-include="templates.layout" scope="">this text should disappear</div>
 	
 		<!-- script src="../../assets/lib/jquery.js" type="text/javascript"></script-->
 		<script src="../../assets/lib/angular/angular.js" type="text/javascript"></script>

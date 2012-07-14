@@ -2,8 +2,9 @@
 /* App Controllers */
 // The top level AppController dynamically sets state for:
 //     templates.layout (simulates ng-view but allows for multiple includes)
-hbo.seTool.controller('AppController', ['$rootScope','$route','$location', function ($rootScope,$route,$location) { 
-    $rootScope.$on('$beforeRouteChange', function(scope, newRoute){
+hbo.GenericTool.controller('AppController', ['$rootScope','$route','$location', function ($rootScope,$route,$location) { 
+    $rootScope.$on('$routeChangeStart', function(scope, newRoute){
+    	console.log('routeChangeStart event triggered');
     	var $rt = newRoute.$route;
         if (!$rt) return;
     	$rt.dependencies = $rt.dependencies?$rt.dependencies:false;
