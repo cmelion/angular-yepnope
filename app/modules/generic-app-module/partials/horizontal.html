@@ -1,8 +1,8 @@
 <div ng-controller="hbo.GenericTool.controllers.horizontalCtrl">
     <p>this is the {{message}} layout</p>
     <table><tr><td>
-        <ng:include src="templates.left" />
+        <div ng-include="templates.left"></div>
     </td><td>
-        <ng:include src="templates.right" />
+        <div ng-include="templates.right"></div>
     </td></tr></table>
 </div>
